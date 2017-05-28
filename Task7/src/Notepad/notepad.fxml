@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Notepad.MyController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="303.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newMenuItem" mnemonicParsing="false" onAction="#newMenuSelected" text="New" />
+                  <MenuItem fx:id="openMenuItem" mnemonicParsing="false" onAction="#openMenuSelected" text="Open" />
+                  <MenuItem fx:id="saveMenuItem" mnemonicParsing="false" onAction="#saveMenuSelected" text="Save" />
+                  <MenuItem fx:id="saveAsMenuItem" mnemonicParsing="false" onAction="#saveAsMenuSelected" text="Save As" />
+                  <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#closeMenuSelected" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="copyMenuItem" mnemonicParsing="false" onAction="#copyMenuSelected" text="Copy" />
+                  <MenuItem fx:id="pastleMenuItem" mnemonicParsing="false" onAction="#pastleMenuSelected" text="Pastle" />
+                  <MenuItem fx:id="deleteMenuItem" mnemonicParsing="false" onAction="#deleteMenuSelected" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutMenuSelected" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="myTestArea" prefHeight="229.0" prefWidth="303.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
